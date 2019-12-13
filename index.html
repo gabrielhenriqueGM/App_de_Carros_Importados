@@ -18,7 +18,13 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron">
+        <h2 id="titulo">bizonho Super Carros</h2><br><br>
+        <div id="menu">
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Incluir Novo Carro" onclick="mostrarInserir();"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Lista de Carros" onclick="mostrarLista();"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Carrinho de Compras" onclick="mostrarCarrinho();"><br>
+    </div>
+        <div class="jumbotron" id="caixaInsercao" hidden>
         <fieldset>
             <h2>Adicionar Carro</h2><br><br>
             <div class="form-group">
@@ -33,38 +39,53 @@
             <div class="form-group">
             <input type="number" id="precoCarro" class="form-control"><br>
         </div>
-            <input type="button" class="btn btn-primary" onclick="inserir()" value="Inserir"><br><br>
+        <div class="btn-group btn-group-lg">
+            <input type="button" class="btn btn-primary" onclick="inserir()" value="Inserir">
+            <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+        </div>
         </fieldset>
     </div>
-        <fieldset>
-            <legend>Carros Cadastrados (Tabela Produtos)</legend>
-            <table>
+        <div class="row" id="carrosLista" hidden>
+            <h2>Adicionar Carro</h2><br><br>
+            <div class="col-md-12">
+                <table class="table">
                 <thead>
-                    <tr>
-                        <td>Nome</td>
-                        <td>Quantidade em Estoque</td>
-                        <td>Valor Unitário</td>
-                    </tr>
+                    <th>
+                        <h3>Nome</h3>
+                    </th>
+
+                    <th>
+                        <h3>Quantidade em Estoque</h3>
+                    </th>
+
+                    <th>
+                        <h3>Valor Unitário</h3>
+                    </th>
                 </thead>
                 <tbody id="produtos">
                 </tbody>
             </table>
-        </fieldset>
-        <fieldset>
-            <legend>Carrinho de Compras</legend>
-            <table>
+        </div>
+        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+    </div>
+
+        <div class="row" id="carrinhoLista" hidden>
+            <h2>Carrinho de Compras</h2><br><br>
+            <div class="col-md-12">
+                <table class="table">
                 <thead>
-                    <tr>
-                        <td>Nome</td>
-                        <td>Quantidade</td>
-                        <td>Valor Unitário</td>
-                        <td>Sub-total</td>
-                    </tr>
+                        <th><h3>Nome</h3></th>
+                        <th><h3>Quantidade</h3></th>
+                        <th><h3>Valor Unitário</h3></th>
+                        <th><h3>Sub-total</h3></th>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-        </fieldset>
+        </div>
+        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+    </div>
+            
     </div>
     <!--script type="text/javascript" src="cordova.js"></script-->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
