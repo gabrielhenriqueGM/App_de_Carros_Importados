@@ -8,6 +8,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <title>Venda de Carro</title>
 
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -16,17 +17,25 @@
 </head>
 
 <body>
-    <div class="app">
+    <div class="container">
+        <div class="jumbotron">
         <fieldset>
-            <legend>Adicionar Carro</legend>
-            <p>Nome do Carro</p>
-            <input type="text" id="nomeCarro"><br>
-            <p>Quantidade</p>
-            <input type="number" id="qtdCarro"><br>
-            <p>Preço Unitário</p>
-            <input type="number" id="precoCarro"><br><br><br>
-            <input type="button" onclick="inserir()" value="Inserir"><br><br>
+            <h2>Adicionar Carro</h2><br><br>
+            <div class="form-group">
+            <label>Nome do Carro</label>
+            <input type="text" id="nomeCarro" class="form-control"><br>
+        </div>
+            <label>Quantidade</label>
+            <div class="form-group">
+            <input type="number" id="qtdCarro" class="form-control"><br>
+        </div>
+            <label>Preço Unitário</label>
+            <div class="form-group">
+            <input type="number" id="precoCarro" class="form-control"><br>
+        </div>
+            <input type="button" class="btn btn-primary" onclick="inserir()" value="Inserir"><br><br>
         </fieldset>
+    </div>
         <fieldset>
             <legend>Carros Cadastrados (Tabela Produtos)</legend>
             <table>
@@ -58,6 +67,8 @@
         </fieldset>
     </div>
     <!--script type="text/javascript" src="cordova.js"></script-->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         //app.initialize();
