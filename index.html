@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -24,13 +23,14 @@
     <div class="container">
         <h2 id="titulo">bizonho Super Carros</h2><br><br>
         <div id="menu">
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Incluir Novo Carro" onclick="mostrarInserir();"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Cadastrar Carro" onclick="mostrarInserir();"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Adicionar ao Carrinho" onclick="addCarrinho()"><br><br>
         <input type="button" class="btn btn-lg btn-primary form-control" value="Lista de Carros" onclick="mostrarLista();"><br><br>
         <input type="button" class="btn btn-lg btn-primary form-control" value="Carrinho de Compras" onclick="mostrarCarrinho();"><br>
         </div>
     </div>
 
-    <!--========== TELA INSERIR NOVO PRODUTO ===========-->
+    <!--========== TELA CADASTRAR NOVO PRODUTO ===========-->
     <div class="container">
         <div class="jumbotron" id="caixaInsercao" hidden>
         <fieldset>
@@ -51,15 +51,36 @@
                 <input type="number" id="precoCarro" class="form-control"><br>
             </div>
             <div class="btn-group btn-group-lg">
-                <input type="button" class="btn btn-primary" onclick="inserir()" value="Inserir">
+                <input type="button" class="btn btn-primary" onclick="poduto_insert()" value="Inserir">
                 <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
             </div>
         </fieldset>
     </div>
 
+    <!--========== TELA ADICIONAR NO CARRINHO ===========-->
+    <div class="container" id="addCarrinho" hidden>
+        <div class="jumbotron">
+            <fieldset>
+                <h2>Adicionar Carro ao Carrinho</h2><br><br>
+                <label>Nome do Carro</label>
+                <div class="form-group">
+                    <input type="text" id="idCarro" class="form-control"><br>
+                </div>
+                
+                <label>Quantidade</label>
+                <div class="form-group">
+                    <input type="number" id="qtdAddCarrinho" class="form-control"><br>
+                </div>
+            </fieldset>
+        </div>
+        <div class="btn-group btn-group-lg">
+            <input type="button" class="btn btn-primary" onclick="carrinho_insert()" value="Adicionar no Carrinho">
+            <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+        </div>
+    </div>
 
 
-
+    <!-- TELA DE PRODUTOS CADASTRADOS NO SISTEMA-->
     </div>
         <div class="row" id="carrosLista" hidden>
             <h2>Adicionar Carro</h2><br><br>
@@ -85,6 +106,7 @@
         <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
     </div>
 
+    <!--======== TELA QUE LISTA TABELA CARRINHO ==========-->
     <div class="row" id="carrinho" hidden>
         <h2>Carrinho de Compras</h2><br><br>
         <div class="col-md-12">
@@ -95,11 +117,11 @@
                     <th><h3>Valor Unitário</h3></th>
                     <th><h3>Sub-total</h3></th>
                 </thead>
-                <tbody>
+                <tbody id="carrinhoDeCompras">
                 </tbody>
             </table>
         </div>
-        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar( )" value="Voltar">
     </div>
 
     <!--script type="text/javascript" src="cordova.js"></script-->

@@ -1,17 +1,18 @@
 function delProdCarrinho(idItem){
 	parseInt(idItem);
 	db.transaction((tx)=>{
-		alert("Value "+idItem+"\nTipo "+typeof idItem)
-		tx.executeSql('DELETE FROM carrinho WHERE idProduto='+idItem);
+		tx.executeSql('DELETE FROM produto WHERE id='+idItem);
 	}, errorDB);
 
-	carrinho_view();
+	produto_view();
 }
 
 function deleteItemCarrinho(idItem){
 	db.transaction((tx)=>{
 		tx.executeSql('DELETE FROM carrinho WHERE idProduto='+idItem+'');
 	}, errorDB);
+
+	carrinho_view();
 }
 
 function efetuarCompra(){
