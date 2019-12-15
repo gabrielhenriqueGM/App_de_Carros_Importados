@@ -9,12 +9,7 @@ function produto_view_data(tx, results) {
 	var len = results.rows.length;
 	console.log(results);
 	for (var i = 0; i < len; i++) {
-		$("#produtos").append("<tr class='agenda_item_lista'>" +
-			"<td><h5>" + results.rows.item(i).nome + "</h5></td>" +
-			"<td><h5>" + results.rows.item(i).qtd + "</h5></td>" +
-			"<td><h5>" + results.rows.item(i).preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + "</h5></td>" +
-			"<td><input type='button' onclick='delProdCarrinho(" + results.rows.item(i).id + ")' value=' X '/></td>" +
-			"</tr>");
+		exibeProduto(i, results);
 	}
 }
 
@@ -44,4 +39,13 @@ function carrinho_view_data(tx, results) {
 		'<td><strong>Total</strong></td>'+
 		'<td><h5>'+total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+'</h5></td>'+
 		'</tr>');
+}
+
+function exibeProduto(i, results){
+	$("#produtos").append("<tr class='agenda_item_lista'>" +
+			"<td><h5>" + results.rows.item(i).nome + "</h5></td>" +
+			"<td><h5>" + results.rows.item(i).qtd + "</h5></td>" +
+			"<td><h5>" + results.rows.item(i).preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + "</h5></td>" +
+			"<td><input type='button' onclick='delProdCarrinho(" + results.rows.item(i).id + ")' value=' X '/></td>" +
+			"</tr>");
 }

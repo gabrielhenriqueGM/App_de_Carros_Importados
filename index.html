@@ -6,8 +6,8 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Venda de Carro</title>
 
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -23,14 +23,35 @@
         <h2 id="titulo">Bizonho Super Carros</h2><br><br>
         <button onclick="mostrarCarrinho()"  id="btnCarrinho"></button>       
     </div>
-
+    
     <!--======= TELA PRINCIPAL (MENU)=========-->
-    <div class="container" id="menu">
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Cadastrar Carro" onclick="telaCadastroCarro()"><br><br>
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Adicionar ao Carrinho" onclick="addAoCarrinho()"><br><br>
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Lista de Carros" onclick="mostrarProdutos();"><br><br>
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Carrinho de Compras" onclick="mostrarCarrinho();"><br>
+
+    <div class="card text-center container">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item" onclick="telaCadastroCarro()">
+                <a class="nav-link active" href="#">Cadastrar Produto</a>
+              </li>
+              <li class="nav-item" onclick="addAoCarrinho()">
+                <a class="nav-link" href="#">Adicionar ao Carrinho</a>
+              </li>
+              <li class="nav-item" onclick="mostrarProdutos()">
+                <a class="nav-link disabled" href="#">Produtos</a>
+              </li>
+            </ul>
+        </div>
+        <!--div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div-->
     </div>
+
+    <!--div class="container" id="menu">
+        <input type="button" class="btn btn-lg btn-primary form-control btn btn-danger" value="Cadastrar Carro" onclick="telaCadastroCarro()"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control btn btn-danger" value="Adicionar ao Carrinho" onclick="addAoCarrinho()"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control btn btn-danger" value="Lista de Carros" onclick="mostrarProdutos();"><br><br>
+    </div-->
 
     <!--========== TELA CADASTRAR NOVO PRODUTO ===========-->
     <div class="container jumbotron" id="addEstoque" hidden>
@@ -56,6 +77,7 @@
                 <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
             </div>
         </fieldset>
+        <br><br><br><br>
     </div>
 
     <!--========== TELA ADICIONAR NO CARRINHO ===========-->
@@ -78,6 +100,7 @@
             <input type="button" class="btn btn-primary" onclick="carrinho_insert()" value="Adicionar no Carrinho">
             <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
         </div>
+        <br><br><br><br>
     </div>
 
 
@@ -104,6 +127,7 @@
         	</table>
     	</div>
     	<input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+        <br><br><br><br>
 	</div>
 
     <!--======== TELA QUE LISTA TABELA CARRINHO ==========-->
@@ -123,6 +147,7 @@
         </div>
         <input type="button" class="btn btn-primary" id="voltar" onclick="voltar( )" value="Voltar"><br><br><br>
         <input type="button" class="btn btn-primary" id="efetuarCompraCarrinho" onclick="efetuarCompra()" value="Efetuar Compra">
+        <br><br><br><br>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
@@ -133,5 +158,4 @@
         app.initialize();
     </script>
 </body>
-
 </html>

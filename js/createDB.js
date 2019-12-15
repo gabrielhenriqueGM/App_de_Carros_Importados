@@ -1,6 +1,6 @@
 var db = window.openDatabase("Carro", "1.0", "VendaDeCarro", 5000);
-//db.transaction(createDB, errorDB, successDB);
-document.addEventListener("deviceready", onDeviceReady, false); //Descomentar essa linha quand fazer o app
+db.transaction(createDB, errorDB, successDB);
+//document.addEventListener("deviceready", onDeviceReady, false); //Descomentar essa linha quand fazer o app
 
 
 function onDeviceReady() {
@@ -42,22 +42,4 @@ function createDB(tx){
 		
 		}, errorDB);
 	}, errorDB);
-
-	//========== INSERÇÃO DE PRODUTOS PRE DEFINIDOS
-	/*
-	if(inserido==0){
-		alert("Produtos inseridos? "+inserido);
-		db.transaction((tx)=>{
-				tx.executeSql('INSERT INTO produto(nome, qtd, preco) VALUES'+
-					'("Ferrary", 10, 150000),'+
-					'("Lamborguine", 5, 100000),'+
-					'("Uno Turbo", 4, 5000),'+
-					'("Mobi", 2, 7000),'+
-					'("Batmovel", 4, 54),'+
-					//'("")'+
-					'("HotWheels", 100, 15)'
-				, errorDB);
-			}, errorDB);
-	}
-	*/
 }

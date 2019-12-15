@@ -1,19 +1,31 @@
 function telaCadastroCarro(){
+ 	/*
  	$("#menu").hide();
-    $("#addEstoque").show();  
+   $("#addEstoque").show();
+	*/
+ 	voltar();
+	$("#addEstoque").show();
+    //if(!$("#addEstoque").is(':visible')){
+	    //Deixa somente o carrinho aparecento
 }
 
 function addAoCarrinho(){
- 	$("#menu").hide();
+ 	voltar();
     $("#addCarrinho").show();    
 }
 
 function mostrarProdutos(){
  	//Faz SELECT na tabela produto
  	produto_view();
-
+ 	/*
  	$("#menu").hide();
  	$("#carrosLista").show();
+	*/
+
+ 	voltar();
+	$("#carrosLista").show();
+ 	//if(!$("#carrosLista").is(':visible')){
+	    //Deixa somente o carrinho aparecento
 
 }
 
@@ -22,17 +34,13 @@ function mostrarCarrinho(){
  	carrinho_view();
  	
  	if(!$("#carrinho").is(':visible')){
-		$("#menu").hide();
+	    //Deixa somente o carrinho aparecento
 		$("#carrinho").show();
- 	}else{
- 		$("#menu").show();
-		$("#carrinho").hide();
- 	}
-
+ 	}else voltar();
 }
 
 function voltar(){
-  	$("#menu").show();
+  	//$("#menu").show();
   	$("#addEstoque").hide();
   	$("#addCarrinho").hide();
   	$("#carrosLista").hide();
