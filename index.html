@@ -19,24 +19,21 @@
 </head>
 
 <body>
-    <div >
+    <div id="cabecalho">
         <h2 id="titulo">Bizonho Super Carros</h2><br><br>
-        <input type="button" onclick="mostrarCarrinho()" value="Carrinho" id="btnCarrinho">        
+        <button onclick="mostrarCarrinho()"  id="btnCarrinho"></button>       
     </div>
 
     <!--======= TELA PRINCIPAL (MENU)=========-->
-    <div class="container">
-        <div id="menu">
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Cadastrar Carro" onclick="mostrarInserir();"><br><br>
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Adicionar ao Carrinho" onclick="addCarrinho()"><br><br>
-        <input type="button" class="btn btn-lg btn-primary form-control" value="Lista de Carros" onclick="mostrarLista();"><br><br>
+    <div class="container" id="menu">
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Cadastrar Carro" onclick="telaCadastroCarro()"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Adicionar ao Carrinho" onclick="addAoCarrinho()"><br><br>
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Lista de Carros" onclick="mostrarProdutos();"><br><br>
         <input type="button" class="btn btn-lg btn-primary form-control" value="Carrinho de Compras" onclick="mostrarCarrinho();"><br>
-        </div>
     </div>
 
     <!--========== TELA CADASTRAR NOVO PRODUTO ===========-->
-    <div class="container">
-        <div class="jumbotron" id="caixaInsercao" hidden>
+    <div class="container jumbotron" id="addEstoque" hidden>
         <fieldset>
             <h2>Adicionar Carro</h2><br><br>
             <label>Nome do Carro</label>
@@ -85,33 +82,32 @@
 
 
     <!-- TELA DE PRODUTOS CADASTRADOS NO SISTEMA-->
-    </div>
-        <div class="row" id="carrosLista" hidden>
-            <h2>Adicionar Carro</h2><br><br>
-            <div class="col-md-12">
-                <table class="table">
-                <thead>
-                    <th>
-                        <h3>Nome</h3>
-                    </th>
+    <div class="container" id="carrosLista" hidden>
+        <h2>Adicionar Carro</h2><br><br>
+        <div class="col-md-12">
+            <table class="table">
+	            <thead>
+	                <th>
+	                    <h3>Nome</h3>
+	                </th>
 
-                    <th>
-                        <h3>Quantidade em Estoque</h3>
-                    </th>
+	                <th>
+	                    <h3>Quantidade em Estoque</h3>
+	                </th>
 
-                    <th>
-                        <h3>Valor Unitário</h3>
-                    </th>
-                </thead>
-                <tbody id="produtos">
-                </tbody>
-            </table>
-        </div>
-        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
-    </div>
+	                <th>
+	                    <h3>Valor Unitário</h3>
+	                </th>
+	            </thead>
+	            <tbody id="produtos">
+	            </tbody>
+        	</table>
+    	</div>
+    	<input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+	</div>
 
     <!--======== TELA QUE LISTA TABELA CARRINHO ==========-->
-    <div class="row" id="carrinho" hidden>
+    <div class="container" id="carrinho" hidden>
         <h2>Carrinho de Compras</h2><br><br>
         <div class="col-md-12">
             <table class="table">

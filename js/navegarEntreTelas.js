@@ -1,14 +1,14 @@
-function mostrarInserir(){
+function telaCadastroCarro(){
  	$("#menu").hide();
-    $("#caixaInsercao").show();  
+    $("#addEstoque").show();  
 }
 
-function addCarrinho(){
+function addAoCarrinho(){
  	$("#menu").hide();
     $("#addCarrinho").show();    
 }
 
-function mostrarLista(){
+function mostrarProdutos(){
  	//Faz SELECT na tabela produto
  	produto_view();
 
@@ -16,18 +16,25 @@ function mostrarLista(){
  	$("#carrosLista").show();
 
 }
+
 function mostrarCarrinho(){
  	//Faz SELECT na tabela carrinho
  	carrinho_view();
-
- 	$("#menu").hide();
- 	$("#carrinho").show();
+ 	
+ 	if(!$("#carrinho").is(':visible')){
+		$("#menu").hide();
+		$("#carrinho").show();
+ 	}else{
+ 		$("#menu").show();
+		$("#carrinho").hide();
+ 	}
 
 }
- function voltar(){
+
+function voltar(){
   	$("#menu").show();
+  	$("#addEstoque").hide();
+  	$("#addCarrinho").hide();
   	$("#carrosLista").hide();
-  	$("#caixaInsercao").hide();
-  	$("#carrinho").hide();
-    $("#addCarrinho").hide();
+    $("#carrinho").hide();
 }
