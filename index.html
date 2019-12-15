@@ -14,36 +14,52 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/createDB.js"></script>
     <script type="text/javascript" src="js/select.js"></script>
+    <script type="text/javascript" src="js/insert.js"></script>
+    <script type="text/javascript" src="js/delete.js"></script>
+    <script type="text/javascript" src="js/navegarEntreTelas.js"></script>
 </head>
 
 <body>
+    <!--======= TELA PRINCIPAL (MENU)=========-->
     <div class="container">
         <h2 id="titulo">bizonho Super Carros</h2><br><br>
         <div id="menu">
         <input type="button" class="btn btn-lg btn-primary form-control" value="Incluir Novo Carro" onclick="mostrarInserir();"><br><br>
         <input type="button" class="btn btn-lg btn-primary form-control" value="Lista de Carros" onclick="mostrarLista();"><br><br>
         <input type="button" class="btn btn-lg btn-primary form-control" value="Carrinho de Compras" onclick="mostrarCarrinho();"><br>
+        </div>
     </div>
+
+    <!--========== TELA INSERIR NOVO PRODUTO ===========-->
+    <div class="container">
         <div class="jumbotron" id="caixaInsercao" hidden>
         <fieldset>
             <h2>Adicionar Carro</h2><br><br>
-            <div class="form-group">
             <label>Nome do Carro</label>
-            <input type="text" id="nomeCarro" class="form-control"><br>
-        </div>
-            <label>Quantidade</label>
+            
             <div class="form-group">
-            <input type="number" id="qtdCarro" class="form-control"><br>
-        </div>
-            <label>Preço Unitário</label>
-            <div class="form-group">
-            <input type="number" id="precoCarro" class="form-control"><br>
-        </div>
-        <div class="btn-group btn-group-lg">
-            <input type="button" class="btn btn-primary" onclick="inserir()" value="Inserir">
-            <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
-        </div>
+                <input type="text" id="nomeCarro" class="form-control"><br>
+            </div>
+                <label>Quantidade</label>
+                
+                <div class="form-group">
+                <input type="number" id="qtdCarro" class="form-control"><br>
+            </div>
+                <label>Preço Unitário</label>
+                
+                <div class="form-group">
+                <input type="number" id="precoCarro" class="form-control"><br>
+            </div>
+            <div class="btn-group btn-group-lg">
+                <input type="button" class="btn btn-primary" onclick="inserir()" value="Inserir">
+                <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+            </div>
         </fieldset>
+    </div>
+
+
+
+
     </div>
         <div class="row" id="carrosLista" hidden>
             <h2>Adicionar Carro</h2><br><br>
@@ -69,15 +85,15 @@
         <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
     </div>
 
-        <div class="row" id="carrinhoLista" hidden>
-            <h2>Carrinho de Compras</h2><br><br>
-            <div class="col-md-12">
-                <table class="table">
+    <div class="row" id="carrinho" hidden>
+        <h2>Carrinho de Compras</h2><br><br>
+        <div class="col-md-12">
+            <table class="table">
                 <thead>
-                        <th><h3>Nome</h3></th>
-                        <th><h3>Quantidade</h3></th>
-                        <th><h3>Valor Unitário</h3></th>
-                        <th><h3>Sub-total</h3></th>
+                    <th><h3>Nome</h3></th>
+                    <th><h3>Quantidade</h3></th>
+                    <th><h3>Valor Unitário</h3></th>
+                    <th><h3>Sub-total</h3></th>
                 </thead>
                 <tbody>
                 </tbody>
@@ -85,10 +101,9 @@
         </div>
         <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
     </div>
-            
-    </div>
+
     <!--script type="text/javascript" src="cordova.js"></script-->
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!--script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script-->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">

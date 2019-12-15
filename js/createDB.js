@@ -14,7 +14,6 @@ function errorDB(err) {
 }
 // Executa se criou o Banco de Dados com sucesso
 function successDB() {
-	alert("Deu tudo bem");
 }
 
 //Cria a tabela se a mesma não existir    
