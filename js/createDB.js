@@ -1,6 +1,6 @@
 var db = window.openDatabase("Carro", "1.0", "VendaDeCarro", 5000);
-db.transaction(createDB, errorDB, successDB);
-//document.addEventListener("deviceready", onDeviceReady, false); Descomentar essa linha quand fazer o app
+//db.transaction(createDB, errorDB, successDB);
+document.addEventListener("deviceready", onDeviceReady, false); //Descomentar essa linha quand fazer o app
 
 
 function onDeviceReady() {
@@ -9,8 +9,8 @@ function onDeviceReady() {
 
 // Trata erro de criação do Banco de Dados
 function errorDB(err) {
-	alert("Erro: " + err.message);
-	console.log(err)
+	//alert("Erro: " + err.message);
+	//console.log(err)
 }
 // Executa se criou o Banco de Dados com sucesso
 function successDB() {
