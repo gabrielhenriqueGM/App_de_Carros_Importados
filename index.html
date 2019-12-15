@@ -19,9 +19,13 @@
 </head>
 
 <body>
+    <div >
+        <h2 id="titulo">Bizonho Super Carros</h2><br><br>
+        <input type="button" onclick="mostrarCarrinho()" value="Carrinho" id="btnCarrinho">        
+    </div>
+
     <!--======= TELA PRINCIPAL (MENU)=========-->
     <div class="container">
-        <h2 id="titulo">bizonho Super Carros</h2><br><br>
         <div id="menu">
         <input type="button" class="btn btn-lg btn-primary form-control" value="Cadastrar Carro" onclick="mostrarInserir();"><br><br>
         <input type="button" class="btn btn-lg btn-primary form-control" value="Adicionar ao Carrinho" onclick="addCarrinho()"><br><br>
@@ -51,7 +55,7 @@
                 <input type="number" id="precoCarro" class="form-control"><br>
             </div>
             <div class="btn-group btn-group-lg">
-                <input type="button" class="btn btn-primary" onclick="poduto_insert()" value="Inserir">
+                <input type="button" class="btn btn-primary" onclick="produto_insert();" value="Inserir">
                 <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
             </div>
         </fieldset>
@@ -121,7 +125,8 @@
                 </tbody>
             </table>
         </div>
-        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar( )" value="Voltar">
+        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar( )" value="Voltar"><br><br><br>
+        <input type="button" class="btn btn-primary" id="efetuarCompraCarrinho" onclick="efetuarCompra()" value="Efetuar Compra">
     </div>
 
     <!--script type="text/javascript" src="cordova.js"></script-->

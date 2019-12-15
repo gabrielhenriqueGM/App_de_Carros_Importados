@@ -1,6 +1,6 @@
 function mostrarInserir(){
  	$("#menu").hide();
-    $("#caixaInsercao").show();    
+    $("#caixaInsercao").show();  
 }
 
 function addCarrinho(){
@@ -9,15 +9,20 @@ function addCarrinho(){
 }
 
 function mostrarLista(){
+ 	//Faz SELECT na tabela produto
+ 	produto_view();
+
  	$("#menu").hide();
  	$("#carrosLista").show();
+
 }
 function mostrarCarrinho(){
+ 	//Faz SELECT na tabela carrinho
+ 	carrinho_view();
+
  	$("#menu").hide();
  	$("#carrinho").show();
 
- 	//Faz SELECT na tabela carrinho
- 	carrinho_view();
 }
  function voltar(){
   	$("#menu").show();

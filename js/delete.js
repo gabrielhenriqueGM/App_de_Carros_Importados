@@ -17,6 +17,8 @@ function deleteItemCarrinho(idItem){
 
 function efetuarCompra(){
 	db.transaction((tx)=>{
-		tx.executeSql('DELETE FROM carrinho', errorDB);
-	}, errorDB);	
+		tx.executeSql('DELETE FROM carrinho');
+	}, errorDB);
+
+	voltar();
 }

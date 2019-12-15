@@ -1,6 +1,3 @@
-produto_view();
-carrinho_view();
-
 function produto_view(){
 	db.transaction(produto_view_db, errorDB, successDB);
 }
@@ -8,14 +5,14 @@ function produto_view_db(tx) {
 	tx.executeSql('SELECT * FROM produto', [], produto_view_data, errorDB);
 }
 function produto_view_data(tx, results) {
-	$("#agenda_listagem").empty();
+	$("#produtos").empty();
 	var len = results.rows.length;
 	console.log(results);
 	for (var i = 0; i < len; i++) {
 		$("#produtos").append("<tr class='agenda_item_lista'>" +
 			"<td><h5>" + results.rows.item(i).nome + "</h5></td>" +
 			"<td><h5>" + results.rows.item(i).qtd + "</h5></td>" +
-			"<td><h5>" + results.rows.item(i).preco + "</h5></td>" +
+			"<td><h5>" + results.rows.item(i).preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + "</h5></td>" +
 			"<td><input type='button' onclick='delProdCarrinho(" + results.rows.item(i).id + ")' value=' X '/></td>" +
 			"</tr>");
 	}
@@ -47,5 +44,4 @@ function carrinho_view_data(tx, results) {
 		'<td><strong>Total</strong></td>'+
 		'<td><h5>'+total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+'</h5></td>'+
 		'</tr>');
-	alert(total);
 }

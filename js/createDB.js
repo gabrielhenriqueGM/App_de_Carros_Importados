@@ -24,7 +24,7 @@ function createDB(tx){
 	
 	//Avalia se os produtos padrês já estão inserido
 	db.transaction(function(tx){
-		tx.executeSql('SELECT (SELECT COUNT(*) FROM produto) > 0 as tamanho', [], function(tx, results){
+		tx.executeSql('SELECT (SELECT COUNT(*) FROM produto WHERE id=1) > 0 as tamanho', [], function(tx, results){
 			inserido = parseInt(results.rows.item(0).tamanho);
 			
 			if(inserido===0)
