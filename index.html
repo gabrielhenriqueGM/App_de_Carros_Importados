@@ -20,7 +20,7 @@
 
 <body>
     <div id="cabecalho">
-        <h2 id="titulo">Bizonho Super Carros</h2><br><br>
+        <a href="index.html"><img src="img/AutoCarsLogo.png" id="logosite"></a>
         <button onclick="mostrarCarrinho()"  id="btnCarrinho"></button>       
     </div>
     
@@ -30,10 +30,10 @@
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item" onclick="telaCadastroCarro()">
-                <a class="nav-link active" href="#">Cadastrar Produto</a>
+                <a class="nav-link active" href="#">Novo carro</a>
               </li>
               <li class="nav-item" onclick="addAoCarrinho()">
-                <a class="nav-link" href="#">Adicionar ao Carrinho</a>
+                <a class="nav-link" href="#">Add ao Carinho</a>
               </li>
               <li class="nav-item" onclick="mostrarProdutos()">
                 <a class="nav-link disabled" href="#">Produtos</a>
@@ -106,7 +106,7 @@
 
     <!-- TELA DE PRODUTOS CADASTRADOS NO SISTEMA-->
     <div class="container" id="carrosLista" hidden>
-        <h2>Adicionar Carro</h2><br><br>
+        <h2>Lista de Carros</h2><br><br>
         <div class="col-md-12">
             <table class="table">
 	            <thead>
