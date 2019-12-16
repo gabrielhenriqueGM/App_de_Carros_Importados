@@ -20,18 +20,6 @@ body button{
     width: 5vh;
 }
 
-#cabecalho{
-    padding: 2vh 0px;
-    background-color:white;
-    position: fixed;
-    top: 0px;
-    height: 13vh;
-    width: 100vw;
-    cursor: pointer;
-    z-index: 1;;
-
-}
-
 h1{
     font-size:24px;
     font-weight:normal;
@@ -68,6 +56,7 @@ a{
     color: black;
 }
 #logosite{
+    position: absolute;
     margin-left: 5px;
-    margin-top: 15px;
+    margin-top: -110px;  
 }
