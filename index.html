@@ -32,15 +32,15 @@
               <li class="nav-item" onclick="telaCadastroCarro()">
                 <a class="nav-link active" href="#">Cadastrar Produto</a>
               </li>
-              <li class="nav-item" onclick="addAoCarrinho()">
-                <a class="nav-link" href="#">Adicionar ao Carrinho</a>
-              </li>
               <li class="nav-item" onclick="mostrarProdutos()">
                 <a class="nav-link disabled" href="#">Produtos</a>
               </li>
             </ul>
         </div>
         <!--div class="card-body">
+              <li class="nav-item" onclick="addAoCarrinho()">
+                <a class="nav-link" href="#">Adicionar ao Carrinho</a>
+              </li>
             <h5 class="card-title">Special title treatment</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -56,7 +56,7 @@
     <!--========== TELA CADASTRAR NOVO PRODUTO ===========-->
     <div class="container jumbotron" id="addEstoque" hidden>
         <fieldset>
-            <h2>Adicionar Carro</h2><br><br>
+            <h2>Cadastrar Novo Carro</h2><br><br>
             <label>Nome do Carro</label>
             
             <div class="form-group">
@@ -73,8 +73,7 @@
                 <input type="number" id="precoCarro" class="form-control"><br>
             </div>
             <div class="btn-group btn-group-lg">
-                <input type="button" class="btn btn-primary" onclick="produto_insert();" value="Inserir">
-                <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+                <input type="button" class="btn btn-primary" onclick="produto_insert(); mostrarProdutos();" value="Inserir">
             </div>
         </fieldset>
         <br><br><br><br>
@@ -87,7 +86,8 @@
                 <h2>Adicionar Carro ao Carrinho</h2><br><br>
                 <label>Nome do Carro</label>
                 <div class="form-group">
-                    <input type="text" id="idCarro" class="form-control"><br>
+                    <p class="form-control" id="nomeCarroEscolhido"></p>
+                    <input type="number" id="idCarro"  hidden><br>
                 </div>
                 
                 <label>Quantidade</label>
@@ -97,16 +97,15 @@
             </fieldset>
         </div>
         <div class="btn-group btn-group-lg">
-            <input type="button" class="btn btn-primary" onclick="carrinho_insert()" value="Adicionar no Carrinho">
-            <input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
+            <input type="button" class="btn btn-primary" onclick="carrinho_insert(); mostrarProdutos();" value="Adicionar no Carrinho">
         </div>
         <br><br><br><br>
     </div>
 
 
     <!-- TELA DE PRODUTOS CADASTRADOS NO SISTEMA-->
-    <div class="container" id="carrosLista" hidden>
-        <h2>Adicionar Carro</h2><br><br>
+    <div class="container" id="carrosLista">
+        <h2>Carro a Venda</h2><br><br>
         <div class="col-md-12">
             <table class="table">
 	            <thead>
@@ -115,7 +114,7 @@
 	                </th>
 
 	                <th>
-	                    <h3>Quantidade em Estoque</h3>
+	                    <h3>Em Estoque</h3>
 	                </th>
 
 	                <th>
@@ -126,7 +125,6 @@
 	            </tbody>
         	</table>
     	</div>
-    	<input type="button" class="btn btn-primary" id="voltar" onclick="voltar()" value="Voltar">
         <br><br><br><br>
 	</div>
 
@@ -140,16 +138,15 @@
                     <th><h3>Quantidade</h3></th>
                     <th><h3>Valor Unitário</h3></th>
                     <th><h3>Sub-total</h3></th>
+                    <th></th>
                 </thead>
                 <tbody id="carrinhoDeCompras">
                 </tbody>
             </table>
         </div>
-        <input type="button" class="btn btn-primary" id="voltar" onclick="voltar( )" value="Voltar"><br><br><br>
         <input type="button" class="btn btn-primary" id="efetuarCompraCarrinho" onclick="efetuarCompra()" value="Efetuar Compra">
         <br><br><br><br>
     </div>
-
     <script type="text/javascript" src="cordova.js"></script>
     <!--script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script-->
     <script src="js/bootstrap.min.js"></script>

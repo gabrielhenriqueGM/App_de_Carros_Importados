@@ -21,4 +21,5 @@ function efetuarCompra(){
 	}, errorDB);
 
 	voltar();
+	mostrarProdutos();
 }

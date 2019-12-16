@@ -22,8 +22,6 @@ function carrinho_insert_db(tx) {
 			
 		}, errorDB);
 	}, ()=>alert('Achei o erro'));
-
-	voltar();
 }
 
 function existe(id){
@@ -46,6 +44,4 @@ function produto_insert_db(tx){
 	var valorProd = $("#precoCarro").val();
 
 	tx.executeSql('INSERT INTO produto(nome, qtd, preco) VALUES("'+nomeProd+'", '+ qtdProd +', '+ valorProd +')');
-	
-	voltar();
 }

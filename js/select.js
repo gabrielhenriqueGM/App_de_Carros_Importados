@@ -47,5 +47,6 @@ function exibeProduto(i, results){
 			"<td><h5>" + results.rows.item(i).qtd + "</h5></td>" +
 			"<td><h5>" + results.rows.item(i).preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + "</h5></td>" +
 			"<td><input type='button' onclick='delProdCarrinho(" + results.rows.item(i).id + ")' value=' X '/></td>" +
+			"<td><input type='button' onclick='addAoCarrinho("+results.rows.item(i).id +", \""+results.rows.item(i).nome+"\")' value=' + '/></td>" +
 			"</tr>");
 }
