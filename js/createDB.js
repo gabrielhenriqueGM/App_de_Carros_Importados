@@ -31,12 +31,12 @@ function createDB(tx){
 			db.transaction((tx)=>{
 				tx.executeSql('INSERT INTO produto(nome, qtd, preco) VALUES'+
 				'("Bugatti Chiron", 10, 1500000),'+
-				'("McLaren F1", 5, 100000),'+
-				'("Uno Turbo", 4, 5000),'+
-				'("Mobi", 2, 7000),'+
-				'("Batmovel", 4, 54),'+
+				'("Koenigsegg Regera", 5, 1000000),'+
+				'("Peugeot 907", 4, 700000),'+
+				'("McLaren F1", 2, 500000),'+
+				'("Nissan GT-R", 4, 100000),'+
 				//'("")'+
-				'("HotWheels", 100, 14)'), (erro)=>alert("Erro no inser Produto defalaut")
+				'("Audi R8", 100, 90000)'), (erro)=>alert("Erro no inser Produto defalaut")
 			}, errorDB);
 
 		
