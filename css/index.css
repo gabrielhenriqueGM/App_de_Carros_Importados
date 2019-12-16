@@ -22,7 +22,7 @@ body button{
 
 #cabecalho{
     padding: 2vh 0px;
-    background-color: #d2eb34;
+    background-color:white;
     position: fixed;
     top: 0px;
     height: 13vh;
@@ -63,4 +63,11 @@ h3{
 
     border: black 2px solid;
     background-color: rgba(255, 255, 255, 0.8);
+}
+a{
+    color: black;
+}
+#logosite{
+    margin-left: 5px;
+    margin-top: 15px;
 }

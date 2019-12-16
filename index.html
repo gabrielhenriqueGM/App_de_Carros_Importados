@@ -20,7 +20,7 @@
 
 <body>
     <div id="cabecalho">
-        <h2 id="titulo">Bizonho Super Carros</h2><br><br>
+        <a href="index.html"><img src="img/AutoCarsLogo.png" id="logosite"></a>
         <button onclick="mostrarCarrinho()"  id="btnCarrinho"></button>       
     </div>
     
@@ -30,28 +30,14 @@
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item" onclick="telaCadastroCarro()">
-                <a class="nav-link active" href="#">Cadastrar Produto</a>
+                <a class="nav-link active" href="#">Novo carro</a>
               </li>
               <li class="nav-item" onclick="mostrarProdutos()">
                 <a class="nav-link disabled" href="#">Produtos</a>
               </li>
             </ul>
         </div>
-        <!--div class="card-body">
-              <li class="nav-item" onclick="addAoCarrinho()">
-                <a class="nav-link" href="#">Adicionar ao Carrinho</a>
-              </li>
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div-->
     </div>
-
-    <!--div class="container" id="menu">
-        <input type="button" class="btn btn-lg btn-primary form-control btn btn-danger" value="Cadastrar Carro" onclick="telaCadastroCarro()"><br><br>
-        <input type="button" class="btn btn-lg btn-primary form-control btn btn-danger" value="Adicionar ao Carrinho" onclick="addAoCarrinho()"><br><br>
-        <input type="button" class="btn btn-lg btn-primary form-control btn btn-danger" value="Lista de Carros" onclick="mostrarProdutos();"><br><br>
-    </div-->
 
     <!--========== TELA CADASTRAR NOVO PRODUTO ===========-->
     <div class="container jumbotron" id="addEstoque" hidden>
@@ -97,7 +83,8 @@
             </fieldset>
         </div>
         <div class="btn-group btn-group-lg">
-            <input type="button" class="btn btn-primary" onclick="carrinho_insert(); mostrarProdutos();" value="Adicionar no Carrinho">
+            <input type="button" class="btn btn-primary" onclick="carrinho_insert(); mostrarProdutos();" value="Adicionar no Carrinho"> 
+            <input type="button" class="btn btn-primary" value="Voltar" onclick="mostrarProdutos();">
         </div>
         <br><br><br><br>
     </div>
@@ -105,7 +92,7 @@
 
     <!-- TELA DE PRODUTOS CADASTRADOS NO SISTEMA-->
     <div class="container" id="carrosLista">
-        <h2>Carro a Venda</h2><br><br>
+        <h2>Carros a Venda</h2><br><br>
         <div class="col-md-12">
             <table class="table">
 	            <thead>
