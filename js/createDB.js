@@ -30,8 +30,8 @@ function createDB(tx){
 			if(inserido===0)
 			db.transaction((tx)=>{
 				tx.executeSql('INSERT INTO produto(nome, qtd, preco) VALUES'+
-				'("Ferrary", 10, 1500000),'+
-				'("Lamborguine", 5, 100000),'+
+				'("Bugatti Chiron", 10, 1500000),'+
+				'("McLaren F1", 5, 100000),'+
 				'("Uno Turbo", 4, 5000),'+
 				'("Mobi", 2, 7000),'+
 				'("Batmovel", 4, 54),'+
